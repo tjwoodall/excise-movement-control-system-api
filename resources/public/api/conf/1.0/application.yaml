@@ -182,7 +182,7 @@ paths:
                 correlationId: 4afb4a1e-33ca-42a5-8117-315db02b7f3c
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
     get:
@@ -277,7 +277,7 @@ paths:
                 debugMessage: Unauthorised Exception with error Bearer token expired
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
   /customs/excise/movements/{movementId}:
@@ -342,7 +342,7 @@ paths:
                     message: Movement not found
                     debugMessage: Movement b6ba6a73-d723-4c9f-b9b7-99e533fb614f is not found within the data for ERNs GBWK002281022
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
   /customs/excise/movements/{movementId}/messages:
@@ -544,7 +544,7 @@ paths:
                 correlationId: 4afb4a1e-33ca-42a5-8117-315db02b7f3c
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
     get:
@@ -651,7 +651,7 @@ paths:
                     debugMessage: Movement b6ba6a73-d723-4c9f-b9b7-99e533fb614f is not found
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
   /customs/excise/movements/{movementId}/messages/{messageId}:
@@ -874,7 +874,7 @@ paths:
                     debugMessage: The accept header is missing or invalid
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
   /customs/excise/traders/pre-validate:
@@ -1070,7 +1070,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error500ResponseMessage"
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
 
@@ -1149,7 +1149,7 @@ paths:
               example: "" #downstream 400s are empty
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
     delete:
@@ -1214,7 +1214,7 @@ paths:
               example: "" #downstream 400s are empty
 
       security:
-        - userRestricted:
+        - User-Restricted:
             - excise-movement-control-system
 
 components:
@@ -1732,7 +1732,7 @@ components:
       type: object
 
   securitySchemes:
-    userRestricted:
+    User-Restricted:
       type: oauth2
       description: HMRC supports OAuth 2.0 for authenticating user restricted API
         requests using an OAuth 2.0 Bearer Token in the AUTHORIZATION header. See
@@ -1745,7 +1745,7 @@ components:
           refreshUrl: https://api.service.hmrc.gov.uk/oauth/refresh
           scopes:
             excise-movement-control-system: Access all aspects of EMCS API
-    applicationRestricted:
+    Application-Restricted:
       type: oauth2
       description: HMRC supports OAuth 2.0 for authenticating application restricted
         API  requests using an OAuth 2.0 Bearer Token in the AUTHORIZATION header.
