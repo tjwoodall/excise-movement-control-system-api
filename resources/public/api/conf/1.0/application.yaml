@@ -1269,7 +1269,7 @@ components:
     DateTime:
       type: string
       format: date-time
-      example: '2021-12-17T09:30:470Z'
+      example: '2021-12-17T09:30:00.470Z'
     CorrelationId:
       type: string
       format: uuid
