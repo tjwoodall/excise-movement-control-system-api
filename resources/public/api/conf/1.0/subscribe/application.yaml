@@ -927,7 +927,7 @@ paths:
                 Invalid trader:
                   summary: "Invalid trader"
                   value:
-                    validationTimeStamp: '2001-12-17T09:30:47-05:00'
+                    validationTimestamp: '2001-12-17T09:30:47-05:00'
                     exciseRegistrationNumber: GBWK000000000
                     entityGroup: UK Record
                     validTrader: false
@@ -936,7 +936,7 @@ paths:
                 Invalid product codes:
                   summary: Invalid product codes
                   value:
-                    validationTimeStamp: '2001-12-17T09:30:47-05:00'
+                    validationTimestamp: '2001-12-17T09:30:47-05:00'
                     exciseRegistrationNumber: GBWK000000206
                     entityGroup: UK Record
                     validTrader: true
