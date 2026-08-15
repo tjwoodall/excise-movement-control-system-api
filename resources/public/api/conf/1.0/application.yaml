@@ -50,7 +50,7 @@ paths:
         '202':
           description: Accepted
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ExciseMovement'
               example:
@@ -63,7 +63,7 @@ paths:
         '400':
           description: The submission of the draft movement message has failed validation
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               examples:
@@ -91,7 +91,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. consignor not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -102,7 +102,7 @@ paths:
         '403':
           description: Consignor ID is not in authorisation bearer token
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               examples:
@@ -122,7 +122,7 @@ paths:
         '404':
           description: Downstream connection refused
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -134,7 +134,7 @@ paths:
         '422':
           description: The draft movement message has failed validation
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -151,7 +151,7 @@ paths:
         '500':
           description: Internal server error
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               examples:
@@ -172,7 +172,7 @@ paths:
         '503':
           description: Downstream service is Unavailable
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -227,7 +227,7 @@ paths:
         '200':
           description: Successful operation. If there are no movements for any of your excise reference numbers (ERNs) in your bearer token or because of the filters, this will return an empty list.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               example:
                 - movementId: "b6ba6a73-d723-4c9f-b9b7-99e533fb614f"
                   consignorId: "GBWK002281023"
@@ -248,7 +248,7 @@ paths:
         '400':
           description: Bad request - either filter ERN is invalid or date filter format is invalid
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -268,7 +268,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. excise number not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -300,7 +300,7 @@ paths:
         '200':
           description: Successful operation. This will contain the details of the requested movement.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               example:
                 movementId: "b6ba6a73-d723-4c9f-b9b7-99e533fb614f"
                 consignorId: "GBWK002281023"
@@ -314,7 +314,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. excise number not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -325,7 +325,7 @@ paths:
         '404':
           description: Movement with supplied id not found for this ERN
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -428,7 +428,7 @@ paths:
         '202':
           description: Accepted
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ExciseMovement'
               example:
@@ -441,7 +441,7 @@ paths:
         '400':
           description: The submitted message has failed validation
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -453,7 +453,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. consignor or consignee not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -464,7 +464,7 @@ paths:
         '403':
           description: Consignor ID or consignee ID is not in authorisation bearer token
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               examples:
@@ -484,7 +484,7 @@ paths:
         '404':
           description: Movement doesn't exist or downstream connection issues
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               examples:
@@ -505,7 +505,7 @@ paths:
         '422':
           description: The message has failed validation
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -522,7 +522,7 @@ paths:
         '500':
           description: Internal server error
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -534,7 +534,7 @@ paths:
         '503':
           description: Downstream service is Unavailable
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -577,7 +577,7 @@ paths:
         '200':
           description: Successful operation
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               example:
                 - encodedMessage: PElFODE1PjwhLS0gRXhhbXBsZSBJRTgxNSBtZXNzYWdlIC0tPjwvSUU4MTU+
                   messageType: IE801
@@ -597,7 +597,7 @@ paths:
         '400':
           description: Invalid movement Id, invalid updated since format or not allowed to access this movement
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -617,7 +617,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. consignor or consignee not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -628,7 +628,7 @@ paths:
         '403':
           description: Consignor ID or Consignee ID for movement is not in authorisation bearer token
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -639,7 +639,7 @@ paths:
         '404':
           description: Movement with supplied id not found for this ERN
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -680,7 +680,7 @@ paths:
         '200':
           description: Successful operation
           content:
-            application/vnd.hmrc.1.0+xml:
+            application/xml:
               schema:
                 # I tried to use a "oneOf" here but the examples didn't work so using a GenericXML object instead.
                 type: object
@@ -812,7 +812,7 @@ paths:
         '400':
           description: Invalid movement Id
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -826,7 +826,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. consignor not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -837,7 +837,7 @@ paths:
         '403':
           description: Consignor ID or Consignee ID for movement is not in authorisation bearer token
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -848,7 +848,7 @@ paths:
         '404':
           description: Movement with supplied id not found for this ERN
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -862,7 +862,7 @@ paths:
         '406':
           description: Accepted header is not acceptable
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
               examples:
@@ -1093,7 +1093,7 @@ paths:
         '202':
           description: Subscribed
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/SubscribeErnResponse'
               example:
@@ -1101,7 +1101,7 @@ paths:
         '400':
           description: Invalid JSON or mandatory fields missing.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1115,7 +1115,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. ERN not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1126,7 +1126,7 @@ paths:
         '403':
           description: ERN being subscribed is not in authorisation bearer token
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1137,7 +1137,7 @@ paths:
         '500':
           description: Internal server error
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1170,14 +1170,14 @@ paths:
         '202':
           description: Unsubscribed
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/UnsubscribeErnResponse'
               example: "" #unsubscribe response will be empty
         '400':
           description: Invalid JSON or mandatory fields missing.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1191,7 +1191,7 @@ paths:
         '401':
           description: Authorisation errors, e.g. ERN not authorised, authorisation expired, invalid enrolment parameter.
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
@@ -1202,7 +1202,7 @@ paths:
         '500':
           description: Internal server error
           content:
-            application/vnd.hmrc.1.0+json:
+            application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
               example:
