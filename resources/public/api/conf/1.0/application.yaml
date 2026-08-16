@@ -1169,11 +1169,7 @@ paths:
       responses:
         '202':
           description: Unsubscribed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UnsubscribeErnResponse'
-              example: "" #unsubscribe response will be empty
+          #unsubscribe response will be empty
         '400':
           description: Invalid JSON or mandatory fields missing.
           content:
