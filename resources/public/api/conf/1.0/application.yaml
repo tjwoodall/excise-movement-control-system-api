@@ -1446,7 +1446,7 @@ components:
       xml:
         name: type
     MessageType:
-      allOf:
+      oneOf:
         - $ref: '#/components/schemas/SubmitDraftMessageType'
         - $ref: '#/components/schemas/IncomingMessageType'
         - $ref: '#/components/schemas/OutgoingMessageType'
