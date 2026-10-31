@@ -3068,14 +3068,14 @@ components:
       - exciseTraderValidationRequest
       properties:
         exciseTraderValidationRequest:
-          $ref: '#/components/schemas/ExciseTraderValidationRequest'
+          $ref: "#/components/schemas/ExciseTraderValidationRequest"
     ExciseTraderValidationRequest:
       required:
       - exciseTraderRequest
       type: object
       properties:
         exciseTraderRequest:
-          $ref: '#/components/schemas/ExciseTraderRequest'
+          $ref: "#/components/schemas/ExciseTraderRequest"
     ExciseTraderRequest:
       required:
       - entityGroup
